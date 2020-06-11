@@ -9,8 +9,7 @@ const App: React.FC = () => {
 
   const addTodoHandler = (todo: string) => {
     const newTodo = { id: Math.random().toString(), text: todo };
-    const newTodos = [...todos, newTodo];
-    setTodos(newTodos);
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
   return (

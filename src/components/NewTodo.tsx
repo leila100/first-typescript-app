@@ -11,6 +11,7 @@ const NewTodo: React.SFC<NewTodoProps> = ({ addTodo }) => {
     event?.preventDefault();
     const enteredText = textInputRef.current!.value;
     addTodo(enteredText);
+    textInputRef.current!.value = "";
   };
 
   return (
